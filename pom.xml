@@ -127,7 +127,7 @@
     <version.azure-identity>1.15.4</version.azure-identity>
     <version.bcpkix-jdk18on>1.80</version.bcpkix-jdk18on>
     <version.byte-buddy-agent>1.17.6</version.byte-buddy-agent>
-    <version.cassandra>4.13.0</version.cassandra>
+    <version.cassandra>4.16.3</version.cassandra>
     <version.commonslogging>1.2</version.commonslogging>
     <version.commonstext>1.10.0</version.commonstext>
     <version.commonslang3>3.18.0</version.commonslang3>
@@ -145,7 +145,7 @@
     <version.ignite>2.13.0</version.ignite>
     <version.informix>4.50.3</version.informix>
     <version.jansi>1.18</version.jansi>
-    <version.jackson>3.1.0</version.jackson>
+    <version.jackson>3.1.1</version.jackson>
     <version.jaxb>2.3.1</version.jaxb>
     <version.jaybird>3.0.10</version.jaybird>
     <version.jboss>3.2.15.Final</version.jboss>
@@ -234,6 +234,12 @@
         <groupId>tools.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
         <version>${version.jackson}</version>
+      </dependency>
+      <!-- Force safe plexus-utils version to remediate CVE Directory Traversal (SNYK-JAVA-ORGCODEHAUSPLEXUS-15766699) -->
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-utils</artifactId>
+        <version>4.0.3</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
